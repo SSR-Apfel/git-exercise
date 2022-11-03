@@ -1,6 +1,7 @@
 from __future__ import annotations
 from typing import List
 from math import isclose
+import copy
 
 # Task A: see comment in function `test_vector_index_access`
 # Task B: see comment in function `test_3d_vector_subtraction`
@@ -27,7 +28,7 @@ class Vector:
 def test_vector_index_access() -> None:
     for index in [0, 1, 2, 3]:
         reference = [float(i) for i in range(4)]
-        vector = Vector(reference)
+        vector = Vector(copy.copy(reference))
         assert all(reference[i] == vector[i] for i in range(4))
         vector[index] = 42.0
         assert vector[index] == 42.0
