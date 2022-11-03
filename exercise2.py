@@ -9,6 +9,9 @@ class Point2D:
     def __isub__(self, other: Vector) -> Point2D:
         return Point2D(self.x - other[0], self.y - other[1])
 
+    def __iadd__(self, other):
+        return Point2D(self.x + other[0], self.y + other[1])
+
     @property
     def x(self) -> float:
         return self._coordinates[0]
