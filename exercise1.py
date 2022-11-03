@@ -44,5 +44,7 @@ def test_3d_vector_addition() -> None:
 
 
 def test_3d_vector_subtraction() -> None:
-    # Task B: add a test for vector subtraction
-    assert False
+    v = Vector([1.0, 2.0, 3.0]) - Vector([0.5, 0.6, 0.7])
+    assert isclose(v[0], 0.5)
+    assert isclose(v[1], 1.4)
+    assert isclose(v[2], 2.3)
