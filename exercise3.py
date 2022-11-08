@@ -31,8 +31,7 @@ class Rectangle:
         #         and reuse that here.
         ll_px = point.x - self._lower_left.x
         ll_py = point.y - self._lower_left.y
-        return self._is_within_interval(ll_px, 0 - tolerance, self._dx + tolerance) 
-            and self._is_within_interval(ll_py, 0 - tolerance, self._dy + tolerance)
+        return self._is_within_interval(ll_px, 0 - tolerance, self._dx + tolerance) and self._is_within_interval(ll_py, 0 - tolerance, self._dy + tolerance)
 
     def _is_within_interval(self, x: float, start: float, end: float) -> bool:
         return x >= start and x <= end
